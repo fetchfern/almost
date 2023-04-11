@@ -1,0 +1,18 @@
+[package]
+name = "almost"
+description = "an extensible X program launcher written in Rust"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies.xcb]
+# use fixed quick-xml dep locally, just use 1.2.0 on crates.io
+version = "1.2.0"
+git = "https://github.com/rust-x-bindings/rust-xcb"
+rev = "68f2c4513f837ee5742b783c4081e294effeb374"
+
+[dependencies.cairo-rs]
+version = "0.17.0"
+features = [ "xcb" ]
+
+[dependencies.anyhow]
+version = "1.0.70"
